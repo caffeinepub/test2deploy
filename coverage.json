@@ -1,0 +1,52 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-27T17:56:00.208Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 2,
+    "implemented": 2,
+    "items": [
+      {
+        "id": "REQ-19",
+        "summary": "Fix the company logo rendering in the Header and Footer so that it displays correctly and clearly against the Finnish blue and white backgrounds. The logo source is frontend/public/assets/generated/logo-brand.dim_300x80.png. Ensure correct image path, appropriate sizing (preserve original aspect ratio), and that no broken image or placeholder appears.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Header.tsx",
+          "frontend/src/components/Footer.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Header.tsx",
+          "frontend/src/components/Footer.tsx"
+        ]
+      },
+      {
+        "id": "REQ-20",
+        "summary": "Update the 'Book Your Free 15-Minute Launch Readiness Call' button in the FinalCTASection so that clicking it opens a mailto link to pankaj.kumar@test2deploy.eu. The button should render as an anchor tag (or use window.location) with href=\"mailto:pankaj.kumar@test2deploy.eu\" rather than a non-functional button.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/FinalCTASection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/FinalCTASection.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/components/FinalCTASection.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Header.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

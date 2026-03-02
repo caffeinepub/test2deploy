@@ -1,0 +1,272 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 9,
+  "summary": "Marketing website for Test2Deploy — a QA consultancy based in Finland offering on-demand QA sprints for startups and product teams. The site includes a hero section, trust strip, who-we-help section, core services (Bug Buster Sprint €349, MVP Quality Sprint €1500, Ongoing QA Support, Advanced QA Services), why-we're-different, how it works, and a final CTA. Slogan: 'Deploy with confidence – every time'. Contact: pankaj.kumar@test2deploy.eu, +358-417280893 for booking calls. Visual theme: blue and white inspired by the Finnish flag.",
+  "architectural_notes": [
+    "Single-page marketing website with anchor-based navigation sections",
+    "Primary CTA is booking a free 15-minute consultation (no e-commerce/payment flow needed)",
+    "Target audience: startups, dev agencies, product teams in Europe (pricing in EUR)",
+    "Contact details: email pankaj.kumar@test2deploy.eu and phone +358-417280893 used for booking calls throughout the site",
+    "Visual theme: blue and white inspired by the Finnish flag (replacing dark navy/orange)"
+  ],
+  "known_issues": [],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-implement-a-sticky-navigation-header-with-the-test2deploy-logo-rendered-from-frontend-public-assets-generated-logo-png-the-slogan-deploy-with-confidence-every-time-and-menu-links-home-services-who-we-help-how-it-works-about-contact-book-call-include-a-prominent-orange-cta-button-book-a-free-call-in-the-header",
+      "title": "Implement a sticky navigation header with the Test2Deploy logo (rendered from frontend/public/assets/generated/logo.png), the slogan 'Deploy with confidence – every time', and menu links: Home, Services, Who We Help, How It Works, About, Contact / Book Call. Include a prominent orange CTA button 'Book a Free Call' in the header.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-full-screen-hero-section-with-headline-launch-your-product-without-fear-of-hidden-bugs-subheadline-on-demand-qa-sprints-for-startups-and-product-teams-fast-affordable-and-no-long-term-contracts-three-key-value-points-find-critical-issues-before-users-do-ship-with-confidence-no-need-to-hire-full-time-qa-and-two-cta-buttons-a-primary-orange-book-a-free-15-minute-consultation-and-a-secondary-outline-view-services-use-the-hero-background-image-from-frontend-public-assets-generated-hero-bg-dim-1920x1080-png",
+      "title": "Build a full-screen Hero section with: headline 'Launch Your Product Without Fear of Hidden Bugs', subheadline 'On-demand QA sprints for startups and product teams — fast, affordable, and no long-term contracts.', three key value points ('Find critical issues before users do', 'Ship with confidence', 'No need to hire full-time QA'), and two CTA buttons — a primary orange 'Book a Free 15-Minute Consultation' and a secondary outline 'View Services'. Use the hero background image from frontend/public/assets/generated/hero-bg.dim_1920x1080.png.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-trust-social-proof-strip-below-the-hero-with-the-text-trusted-by-fast-moving-startups-preparing-for-launch-pilots-and-investor-demos-followed-by-five-industry-checkmarks-fintech-saas-marketplaces-mobile-apps-b2b-platforms",
+      "title": "Add a Trust / Social Proof strip below the hero with the text 'Trusted by fast-moving startups preparing for launch, pilots, and investor demos.' followed by five industry checkmarks: Fintech, SaaS, Marketplaces, Mobile apps, B2B platforms.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-who-we-help-section-with-the-heading-built-for-teams-that-can-t-afford-release-failures-and-four-cards-1-startup-founders-launching-mvps-2-development-agencies-3-product-teams-without-qa-4-teams-facing-critical-deadlines-each-with-their-respective-icon-title-and-description-as-provided",
+      "title": "Build a 'Who We Help' section with the heading 'Built for Teams That Can't Afford Release Failures' and four cards: (1) Startup Founders Launching MVPs, (2) Development Agencies, (3) Product Teams Without QA, (4) Teams Facing Critical Deadlines — each with their respective icon, title, and description as provided.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-core-services-section-with-four-productized-service-cards-1-bug-buster-sprint-3-5-day-sprint-starting-from-349-with-listed-inclusions-2-mvp-quality-sprint-2-week-engagement-fixed-price-1-500-with-inclusions-and-highlighted-as-the-recommended-offer-3-ongoing-qa-support-flexible-monthly-plans-10-20-40-hrs-with-inclusions-4-advanced-qa-services-for-growing-products-with-inclusions-each-card-should-show-its-title-description-inclusions-as-a-checklist-and-pricing",
+      "title": "Build a 'Core Services' section with four productized service cards: (1) Bug Buster Sprint — 3–5 day sprint, starting from €349, with listed inclusions; (2) MVP Quality Sprint — 2-week engagement, fixed price €1,500, with inclusions and highlighted as the recommended offer; (3) Ongoing QA Support — flexible monthly plans (10/20/40 hrs), with inclusions; (4) Advanced QA Services — for growing products, with inclusions. Each card should show its title, description, inclusions as a checklist, and pricing.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-why-test2deploy-is-different-section-with-five-differentiator-items-1-built-for-startups-not-enterprise-bureaucracy-2-fast-execution-days-or-weeks-not-months-3-fixed-pricing-know-your-cost-upfront-4-no-long-term-contracts-use-qa-when-you-need-it-5-outcome-focused-testing-helps-you-decide-if-you-re-ready-to-launch",
+      "title": "Build a 'Why Test2Deploy is Different' section with five differentiator items: (1) Built for Startups — Not Enterprise Bureaucracy, (2) Fast Execution (days or weeks, not months), (3) Fixed Pricing (know your cost upfront), (4) No Long-Term Contracts (use QA when you need it), (5) Outcome-Focused Testing (helps you decide if you're ready to launch).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-real-outcomes-section-with-the-heading-after-working-with-test2deploy-you-ll-know-and-a-checklist-of-5-outcomes-what-s-safe-to-release-which-issues-must-be-fixed-first-hidden-risks-and-edge-cases-where-user-experience-may-fail-how-to-proceed-with-confidence",
+      "title": "Build a 'Real Outcomes' section with the heading 'After working with Test2Deploy, you'll know:' and a checklist of 5 outcomes: What's safe to release, Which issues must be fixed first, Hidden risks and edge cases, Where user experience may fail, How to proceed with confidence.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-how-it-works-section-with-4-numbered-steps-1-quick-consultation-understand-product-timeline-and-risks-2-tailored-sprint-plan-clear-scope-timeline-and-deliverables-3-testing-execution-independent-testing-across-critical-user-journeys-4-ship-with-confidence-actionable-insights-and-release-readiness-clarity",
+      "title": "Build a 'How It Works' section with 4 numbered steps: (1) Quick Consultation — understand product, timeline, and risks; (2) Tailored Sprint Plan — clear scope, timeline, and deliverables; (3) Testing Execution — independent testing across critical user journeys; (4) Ship with Confidence — actionable insights and release readiness clarity.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-an-ideal-use-cases-section-listing-6-scenarios-where-test2deploy-is-the-perfect-fit-launching-an-mvp-preparing-for-investor-demo-releasing-major-update-scaling-users-rapidly-delivering-client-project-recovering-from-quality-issues",
+      "title": "Build an 'Ideal Use Cases' section listing 6 scenarios where Test2Deploy is the perfect fit: Launching an MVP, Preparing for investor demo, Releasing major update, Scaling users rapidly, Delivering client project, Recovering from quality issues.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-final-cta-section-with-the-heading-don-t-let-hidden-bugs-damage-your-launch-subtext-ship-with-confidence-not-uncertainty-a-large-orange-primary-cta-button-book-your-free-15-minute-launch-readiness-call-and-a-note-no-obligation-just-practical-advice",
+      "title": "Build a final CTA section with the heading 'Don't Let Hidden Bugs Damage Your Launch', subtext 'Ship with confidence — not uncertainty.', a large orange primary CTA button 'Book Your Free 15-Minute Launch Readiness Call', and a note 'No obligation. Just practical advice.'",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-visual-theme-across-the-entire-site-dark-navy-charcoal-background-0d1117-or-similar-with-vibrant-orange-ff6b35-or-similar-as-the-primary-accent-color-for-ctas-and-highlights-white-and-light-gray-for-text-and-sharp-geometric-technical-typography-e-g-inter-or-space-grotesk-the-design-should-feel-like-a-high-quality-saas-product-page-confident-technical-and-startup-friendly-maintain-consistent-spacing-section-transitions-and-hover-states-throughout",
+      "title": "Apply a cohesive visual theme across the entire site: dark navy/charcoal background (#0D1117 or similar) with vibrant orange (#FF6B35 or similar) as the primary accent color for CTAs and highlights, white and light gray for text, and sharp geometric/technical typography (e.g., Inter or Space Grotesk). The design should feel like a high-quality SaaS product page — confident, technical, and startup-friendly. Maintain consistent spacing, section transitions, and hover states throughout.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-generated-logo-image-frontend-public-assets-generated-logo-dim-300x80-png-in-the-header-and-footer-render-the-hero-background-image-frontend-public-assets-generated-hero-bg-dim-1920x1080-png-as-the-full-width-background-of-the-hero-section",
+      "title": "Render the generated logo image (frontend/public/assets/generated/logo.dim_300x80.png) in the header and footer. Render the hero background image (frontend/public/assets/generated/hero-bg.dim_1920x1080.png) as the full-width background of the Hero section.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-existing-generated-logo-in-the-header-and-footer-with-the-newly-uploaded-test2deploy-company-logo-frontend-public-assets-generated-logo-brand-dim-300x80-png-the-logo-must-render-clearly-against-the-dark-navy-background-and-preserve-its-original-proportions",
+      "title": "Replace the existing generated logo in the Header and Footer with the newly uploaded Test2Deploy company logo (frontend/public/assets/generated/logo-brand.dim_300x80.png). The logo must render clearly against the dark navy background and preserve its original proportions.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-the-slogan-deploy-with-confidence-every-time-prominently-in-both-the-header-below-or-adjacent-to-the-logo-and-the-footer-in-the-header-it-should-appear-as-a-subtle-tagline-next-to-or-beneath-the-logo-in-the-footer-it-should-appear-as-the-brand-descriptor-line",
+      "title": "Display the slogan 'Deploy with confidence – every time' prominently in both the Header (below or adjacent to the logo) and the Footer. In the Header it should appear as a subtle tagline next to or beneath the logo; in the Footer it should appear as the brand descriptor line.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-all-booking-contact-ctas-and-contact-references-across-the-site-header-book-a-free-call-button-hero-book-a-free-15-minute-consultation-button-final-cta-book-your-free-15-minute-launch-readiness-call-button-and-footer-contact-details-to-use-the-email-address-pankaj-kumar-test2deploy-eu-mailto-link-and-the-phone-number-358-417280893-tel-link-both-contact-details-should-also-be-listed-together-in-the-footer",
+      "title": "Update all booking/contact CTAs and contact references across the site (Header 'Book a Free Call' button, Hero 'Book a Free 15-Minute Consultation' button, Final CTA 'Book Your Free 15-Minute Launch Readiness Call' button, and Footer contact details) to use the email address pankaj.kumar@test2deploy.eu (mailto link) and the phone number +358-417280893 (tel link). Both contact details should also be listed together in the Footer.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-dark-navy-orange-color-theme-with-a-blue-and-white-theme-inspired-by-the-finnish-flag-the-primary-background-should-be-clean-white-ffffff-or-very-light-off-white-with-the-finnish-flag-blue-003580-or-002f6c-a-deep-nordic-blue-as-the-primary-accent-color-for-headers-ctas-section-backgrounds-icons-borders-and-highlights-text-should-be-deep-navy-dark-blue-on-light-backgrounds-and-white-on-dark-blue-backgrounds-replace-all-orange-accent-usages-ff6b35-with-the-finnish-blue-update-css-custom-properties-in-frontend-src-index-css-and-tailwind-color-tokens-in-tailwind-config-js-to-reflect-this-new-palette",
+      "title": "Replace the current dark navy/orange color theme with a blue and white theme inspired by the Finnish flag. The primary background should be clean white (#FFFFFF) or very light off-white, with the Finnish flag blue (#003580 or #002F6C, a deep Nordic blue) as the primary accent color for headers, CTAs, section backgrounds, icons, borders, and highlights. Text should be deep navy/dark blue on light backgrounds and white on dark/blue backgrounds. Replace all orange accent usages (#FF6B35) with the Finnish blue. Update CSS custom properties in frontend/src/index.css and Tailwind color tokens in tailwind.config.js to reflect this new palette.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-all-section-components-header-herosection-truststrip-whowehelpsection-coreservicessection-whydifferentsection-realoutcomessection-howitworkssection-idealusecasessection-finalctasection-footer-to-apply-the-finnish-flag-blue-and-white-theme-sections-should-alternate-between-white-and-light-blue-e8f0fa-or-similar-backgrounds-for-visual-separation-the-header-should-use-a-white-or-light-background-with-finnish-blue-nav-links-and-a-finnish-blue-cta-button-the-finalcta-section-and-footer-may-use-finnish-blue-as-a-full-background-with-white-text",
+      "title": "Update all section components (Header, HeroSection, TrustStrip, WhoWeHelpSection, CoreServicesSection, WhyDifferentSection, RealOutcomesSection, HowItWorksSection, IdealUseCasesSection, FinalCTASection, Footer) to apply the Finnish flag blue and white theme. Sections should alternate between white and light blue (#E8F0FA or similar) backgrounds for visual separation. The Header should use a white or light background with Finnish blue nav links and a Finnish blue CTA button. The FinalCTA section and Footer may use Finnish blue as a full background with white text.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-a-new-hero-background-image-with-a-finnish-flag-inspired-blue-and-white-aesthetic-a-clean-professional-abstract-or-geometric-composition-using-deep-nordic-blue-003580-and-white-suitable-for-a-tech-saas-product-page-hero-section",
+      "title": "Generate a new hero background image with a Finnish flag-inspired blue and white aesthetic — a clean, professional abstract or geometric composition using deep Nordic blue (#003580) and white, suitable for a tech/SaaS product page hero section.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-company-logo-rendering-in-the-header-and-footer-so-that-it-displays-correctly-and-clearly-against-the-finnish-blue-and-white-backgrounds-the-logo-source-is-frontend-public-assets-generated-logo-brand-dim-300x80-png-ensure-correct-image-path-appropriate-sizing-preserve-original-aspect-ratio-and-that-no-broken-image-or-placeholder-appears",
+      "title": "Fix the company logo rendering in the Header and Footer so that it displays correctly and clearly against the Finnish blue and white backgrounds. The logo source is frontend/public/assets/generated/logo-brand.dim_300x80.png. Ensure correct image path, appropriate sizing (preserve original aspect ratio), and that no broken image or placeholder appears.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-book-your-free-15-minute-launch-readiness-call-button-in-the-finalctasection-so-that-clicking-it-opens-a-mailto-link-to-pankaj-kumar-test2deploy-eu-the-button-should-render-as-an-anchor-tag-or-use-window-location-with-href-mailto-pankaj-kumar-test2deploy-eu-rather-than-a-non-functional-button",
+      "title": "Update the 'Book Your Free 15-Minute Launch Readiness Call' button in the FinalCTASection so that clicking it opens a mailto link to pankaj.kumar@test2deploy.eu. The button should render as an anchor tag (or use window.location) with href=\"mailto:pankaj.kumar@test2deploy.eu\" rather than a non-functional button.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Hero section with headline, subheadline, key value points, and CTA buttons (Book Consultation + View Services)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Trust/social proof strip listing industries served (Fintech, SaaS, Marketplaces, Mobile apps, B2B platforms)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Who We Help section targeting startup founders, dev agencies, product teams without QA, and deadline-driven teams",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Core Services section with Bug Buster Sprint (€349), MVP Quality Sprint (€1500), Ongoing QA Support, and Advanced QA Services",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Why Test2Deploy is Different section (startup-focused, fast, fixed pricing, no contracts, outcome-focused)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "How It Works section with 4 steps: Consultation, Sprint Plan, Testing Execution, Ship with Confidence",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Real Outcomes and Ideal Use Cases sections",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Final CTA section: 'Book Your Free 15-Minute Launch Readiness Call'",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Site navigation header: Home, Services, Who We Help, How It Works, About, Contact/Book Call",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Company logo placeholder and slogan 'Deploy with confidence – every time' in header",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Add contact/booking details (email: pankaj.kumar@test2deploy.eu, phone: +358-417280893) and slogan 'Deploy with confidence – every time' in appropriate sections (footer, CTA, header)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Apply a blue and white color theme inspired by the Finnish flag across the entire site, replacing the current dark navy/orange theme",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Add a contact form so visitors can send messages directly from the site",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Fix the company logo display in the header/footer",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "When 'Book Your Free 15-Minute Launch Readiness Call' button is clicked, redirect to mailto:pankaj.kumar@test2deploy.eu",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Test2Deploy",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

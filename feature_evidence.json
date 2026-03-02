@@ -1,0 +1,42 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-fix-the-company-logo-rendering-in-the-header-and-footer-so-that-it-displays-correctly-and-clearly-against-the-finnish-blue-and-white-backgrounds-the-logo-source-is-frontend-public-assets-generated-logo-brand-dim-300x80-png-ensure-correct-image-path-appropriate-sizing-preserve-original-aspect-ratio-and-that-no-broken-image-or-placeholder-appears",
+      "featureTitle": "Fix the company logo rendering in the Header and Footer so that it displays correctly and clearly against the Finnish blue and white backgrounds. The logo source is frontend/public/assets/generated/logo-brand.dim_300x80.png. Ensure correct image path, appropriate sizing (preserve original aspect ratio), and that no broken image or placeholder appears.",
+      "files": [
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/components/Header.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-19"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-book-your-free-15-minute-launch-readiness-call-button-in-the-finalctasection-so-that-clicking-it-opens-a-mailto-link-to-pankaj-kumar-test2deploy-eu-the-button-should-render-as-an-anchor-tag-or-use-window-location-with-href-mailto-pankaj-kumar-test2deploy-eu-rather-than-a-non-functional-button",
+      "featureTitle": "Update the 'Book Your Free 15-Minute Launch Readiness Call' button in the FinalCTASection so that clicking it opens a mailto link to pankaj.kumar@test2deploy.eu. The button should render as an anchor tag (or use window.location) with href=\"mailto:pankaj.kumar@test2deploy.eu\" rather than a non-functional button.",
+      "files": [
+        "frontend/src/components/FinalCTASection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-20"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

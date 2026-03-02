@@ -1,0 +1,16 @@
+{
+  "frontend/src/index.css": "Global styles with Finnish flag-inspired blue and white OKLCH color system, Space Grotesk and Inter font imports, Finnish blue tokens, and utility classes for gradients, card hover effects, and section backgrounds.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with Space Grotesk/Inter font families, Finnish flag blue and white color tokens (#003580 primary), shadow utilities, and fade-in animations.",
+  "frontend/src/App.tsx": "Root application component that composes all marketing page sections in order: Header, HeroSection, TrustStrip, WhoWeHelpSection, CoreServicesSection, WhyDifferentSection, RealOutcomesSection, HowItWorksSection, IdealUseCasesSection, FinalCTASection, and Footer.",
+  "frontend/src/components/Header.tsx": "Sticky navigation header using the actual `Company Logo.jpg` asset for correct logo display, with Finnish blue nav links, CTA button linking to the contact email, and responsive mobile menu.",
+  "frontend/src/components/HeroSection.tsx": "Full-viewport hero section with Finnish flag-inspired hero background image, blue overlay, subtle cross pattern, animated badge, white headline, and Finnish blue CTA buttons.",
+  "frontend/src/components/TrustStrip.tsx": "Horizontal trust strip with Finnish blue background, white text, and Finnish blue checkmark icons for five industry categories.",
+  "frontend/src/components/WhoWeHelpSection.tsx": "Light blue alternating section with four audience cards using white backgrounds, Finnish blue borders, and Finnish blue icon containers.",
+  "frontend/src/components/CoreServicesSection.tsx": "White section with four service cards; featured MVP card uses Finnish blue background with white text, others use white with Finnish blue accents.",
+  "frontend/src/components/WhyDifferentSection.tsx": "Light blue alternating section with five differentiator cards on white backgrounds, Finnish blue icon containers, and large background numbers.",
+  "frontend/src/components/RealOutcomesSection.tsx": "White section with two-column layout; outcomes checklist card uses Finnish blue background with white text and light blue checkmarks.",
+  "frontend/src/components/HowItWorksSection.tsx": "Light blue section with four numbered steps, Finnish blue icon circles, connector line, and Finnish blue CTA button.",
+  "frontend/src/components/IdealUseCasesSection.tsx": "White section with six use-case cards using Finnish blue icons and a Finnish blue light info panel with benefit checklist.",
+  "frontend/src/components/FinalCTASection.tsx": "Finnish blue full-width CTA section with the \"Book Your Free 15-Minute Launch Readiness Call\" button wired as an `<a>` tag with `href=\"mailto:pankaj.kumar@test2deploy.eu\"`, trust pills, and a direct email link.",
+  "frontend/src/components/Footer.tsx": "Finnish blue footer with the `Company Logo.jpg` displayed inside a white rounded pill container for visibility on the dark background, contact details, navigation links, dynamic copyright, and caffeine.ai attribution."
+}

@@ -1,0 +1,45 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Fix company logo display and wire CTA button to email",
+  "requirements": [
+    {
+      "id": "REQ-19",
+      "summary": "Fix the company logo rendering in Header and Footer to display correctly with proper path, sizing, and visibility against Finnish blue and white backgrounds",
+      "acceptanceCriteria": [
+        "The Test2Deploy logo renders visibly in the Header without distortion or broken image",
+        "The Test2Deploy logo renders visibly in the Footer without distortion or broken image",
+        "The logo preserves its original aspect ratio and proportions",
+        "The logo is legible against the Header's white/light background and the Footer's Finnish blue background"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "modify",
+          "description": "Update the logo image element to use the correct path /assets/generated/logo-brand.dim_300x80.png. Ensure the img tag has appropriate width/height attributes or CSS to preserve the 300x80 aspect ratio (approximately 3.75:1). Add alt text 'Test2Deploy logo' for accessibility. Verify the logo renders clearly against the white/light header background without broken image placeholders."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Update the logo image element to use the correct path /assets/generated/logo-brand.dim_300x80.png. Ensure the img tag has appropriate width/height attributes or CSS to preserve the 300x80 aspect ratio (approximately 3.75:1). Add alt text 'Test2Deploy logo' for accessibility. Verify the logo renders clearly and legibly against the Finnish blue footer background without broken image placeholders."
+        }
+      ]
+    },
+    {
+      "id": "REQ-20",
+      "summary": "Update the 'Book Your Free 15-Minute Launch Readiness Call' button in FinalCTASection to open mailto link to pankaj.kumar@test2deploy.eu",
+      "acceptanceCriteria": [
+        "Clicking 'Book Your Free 15-Minute Launch Readiness Call' in FinalCTASection opens the user's default email client with pankaj.kumar@test2deploy.eu pre-filled as the recipient",
+        "The button uses href=\"mailto:pankaj.kumar@test2deploy.eu\" (rendered as an <a> tag)",
+        "The button's visual appearance (color, size, hover state) remains consistent with the Finnish blue theme"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/FinalCTASection.tsx",
+          "operation": "modify",
+          "description": "Replace the 'Book Your Free 15-Minute Launch Readiness Call' button element with an anchor tag (<a>) using href=\"mailto:pankaj.kumar@test2deploy.eu\". Preserve all existing visual styling (white background, Finnish blue text, padding, rounded corners, hover effects) by applying the same className or inline styles to the anchor tag. Ensure the button remains visually consistent with the current Finnish blue theme and maintains its position in the CTA section."
+        }
+      ]
+    }
+  ]
+}
