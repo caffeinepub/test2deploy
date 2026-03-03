@@ -1,10 +1,29 @@
-# Specification
+# Test2Deploy
 
-## Summary
-**Goal:** Fix the company logo display in the Header and Footer, and wire the CTA button in FinalCTASection to open an email client.
+## Current State
+The site is a fully static marketing website with blue/white Finland flag theme. It has sections: Hero, TrustStrip, WhoWeHelp, CoreServices, WhyDifferent, RealOutcomes, HowItWorks, IdealUseCases, FinalCTA, and Footer. All CTAs currently link to `mailto:pankaj.kumar@test2deploy.eu`. There is no contact form — users are redirected to their email client when clicking booking/contact buttons.
 
-**Planned changes:**
-- Fix the logo image path in Header and Footer to correctly reference `frontend/public/assets/generated/logo-brand.dim_300x80.png`, preserving aspect ratio and ensuring visibility against both white and Finnish blue backgrounds
-- Update the "Book Your Free 15-Minute Launch Readiness Call" button in FinalCTASection to use `href="mailto:pankaj.kumar@test2deploy.eu"` rendered as an `<a>` tag
+## Requested Changes (Diff)
 
-**User-visible outcome:** The company logo displays correctly in both the Header and Footer without broken images, and clicking the CTA button opens the user's default email client with `pankaj.kumar@test2deploy.eu` pre-filled as the recipient.
+### Add
+- A `ContactFormSection` component with a contact form that allows visitors to send a message directly from the website without opening their email client.
+- Form fields: Name (text), Email (email), Phone (optional, text), Subject (select or text), Message (textarea), and a Submit button.
+- A contact method chooser — when the user clicks any "Book a Free Call" CTA button, show a modal/dialog that lets them choose between: (1) Send Email (opens mailto), (2) Call/WhatsApp (opens tel:+358417280893), or (3) Send a Message (scrolls to / opens the contact form).
+- The contact form should display a success message after submission. Since email is disabled, the form should store submissions in the backend (already has a backend actor).
+
+### Modify
+- `FinalCTASection.tsx` — Change the CTA button to open a "How would you like to reach us?" modal with email/call/message options instead of directly linking to mailto.
+- `HeroSection.tsx` — Change the "Book a Free Call" button to open the same contact method chooser modal.
+- `App.tsx` — Add `ContactFormSection` before `FinalCTASection`.
+- `Header.tsx` — Add a "Contact" nav link that scrolls to the contact form section.
+
+### Remove
+- Nothing removed.
+
+## Implementation Plan
+1. Create a `ContactMethodModal` component: shows three options — Email (mailto link), Call (tel link), and Send a Message (scrolls to #contact section). Shared state via a simple prop/callback pattern.
+2. Create a `ContactFormSection` component with the form, validation, and a success state. On submit, call the backend `submitContactForm` (or store in a simple text field in backend if available). If no backend endpoint exists, simulate with a localStorage approach or just show success UI after a short delay.
+3. Update `HeroSection` and `FinalCTASection` to use `ContactMethodModal` on CTA click.
+4. Update `App.tsx` to include `ContactFormSection`.
+5. Update `Header.tsx` to add a "Contact" nav item.
+6. Ensure all new interactive elements have deterministic `data-ocid` markers.

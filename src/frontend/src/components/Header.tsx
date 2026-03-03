@@ -1,5 +1,6 @@
 import { Mail, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import ContactMethodModal from "./ContactMethodModal";
 
 const navLinks = [
   { label: "Who We Help", href: "#who-we-help" },
@@ -8,11 +9,13 @@ const navLinks = [
   { label: "Outcomes", href: "#outcomes" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "Use Cases", href: "#use-cases" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -76,15 +79,16 @@ export default function Header() {
 
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-3">
-            <a
-              href="mailto:pankaj.kumar@test2deploy.eu"
-              aria-label="Book a free call — email pankaj.kumar@test2deploy.eu"
+            <button
+              type="button"
+              onClick={() => setModalOpen(true)}
+              aria-label="Book a free call — choose contact method"
               data-ocid="header.book_call.button"
               className="flex items-center gap-2 bg-finland-blue text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-finland-blue-dark transition-colors duration-200 shadow-finland"
             >
               <Mail aria-hidden="true" className="w-4 h-4" />
               Book a Free Call
-            </a>
+            </button>
           </div>
 
           {/* Mobile hamburger */}
@@ -126,19 +130,28 @@ export default function Header() {
                 </button>
               ))}
               <div className="pt-3 border-t border-finland-blue-mid">
-                <a
-                  href="mailto:pankaj.kumar@test2deploy.eu"
-                  aria-label="Book a free call — email pankaj.kumar@test2deploy.eu"
+                <button
+                  type="button"
+                  onClick={() => {
+                    setMobileOpen(false);
+                    setModalOpen(true);
+                  }}
+                  aria-label="Book a free call — choose contact method"
                   className="flex items-center justify-center gap-2 bg-finland-blue text-white px-5 py-3 rounded-lg text-sm font-semibold hover:bg-finland-blue-dark transition-colors w-full"
                 >
                   <Mail aria-hidden="true" className="w-4 h-4" />
                   Book a Free Call
-                </a>
+                </button>
               </div>
             </div>
           </nav>
         </div>
       )}
+
+      <ContactMethodModal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+      />
     </header>
   );
 }

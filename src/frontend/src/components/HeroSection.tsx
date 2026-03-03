@@ -1,4 +1,6 @@
 import { ArrowDown, CheckCircle, Mail } from "lucide-react";
+import { useState } from "react";
+import ContactMethodModal from "./ContactMethodModal";
 
 const checkpoints = [
   "No full-time QA hire needed",
@@ -7,6 +9,8 @@ const checkpoints = [
 ];
 
 export default function HeroSection() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   const scrollToServices = () => {
     const el = document.querySelector("#services");
     if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -82,15 +86,16 @@ export default function HeroSection() {
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in">
-          <a
-            href="mailto:pankaj.kumar@test2deploy.eu"
-            aria-label="Book a free call — email pankaj.kumar@test2deploy.eu"
+          <button
+            type="button"
+            onClick={() => setModalOpen(true)}
+            aria-label="Book a free call — choose contact method"
             data-ocid="hero.book_call.button"
             className="flex items-center gap-2 bg-white text-finland-blue px-8 py-4 rounded-xl text-base font-bold hover:bg-finland-blue-light transition-all duration-200 shadow-finland-lg hover:shadow-finland-glow"
           >
             <Mail aria-hidden="true" className="w-5 h-5" />
             Book a Free Call
-          </a>
+          </button>
           <button
             type="button"
             onClick={scrollToServices}
@@ -113,6 +118,11 @@ export default function HeroSection() {
       >
         <ArrowDown aria-hidden="true" className="w-6 h-6 text-white/60" />
       </button>
+
+      <ContactMethodModal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+      />
     </section>
   );
 }

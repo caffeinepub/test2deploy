@@ -1,3 +1,4 @@
+import ContactFormSection from "./components/ContactFormSection";
 import CoreServicesSection from "./components/CoreServicesSection";
 import FinalCTASection from "./components/FinalCTASection";
 import Footer from "./components/Footer";
@@ -29,6 +30,7 @@ export default function App() {
         <RealOutcomesSection />
         <HowItWorksSection />
         <IdealUseCasesSection />
+        <ContactFormSection />
         <FinalCTASection />
       </main>
       <Footer />

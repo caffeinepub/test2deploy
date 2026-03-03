@@ -1,4 +1,6 @@
 import { Clock, Mail, Shield, Star, Users } from "lucide-react";
+import { useState } from "react";
+import ContactMethodModal from "./ContactMethodModal";
 
 const trustPills = [
   { icon: Shield, label: "No contracts required" },
@@ -8,6 +10,8 @@ const trustPills = [
 ];
 
 export default function FinalCTASection() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <section className="section-finland-blue py-20 lg:py-28 relative overflow-hidden">
       {/* Subtle cross pattern inspired by Finnish flag — decorative */}
@@ -44,16 +48,17 @@ export default function FinalCTASection() {
           QA approach — no strings attached.
         </p>
 
-        {/* CTA Button — opens mailto to pankaj.kumar@test2deploy.eu */}
-        <a
-          href="mailto:pankaj.kumar@test2deploy.eu"
-          aria-label="Book your free 15-minute launch readiness call — email pankaj.kumar@test2deploy.eu"
+        {/* CTA Button — opens contact method chooser */}
+        <button
+          type="button"
+          onClick={() => setModalOpen(true)}
+          aria-label="Book your free 15-minute launch readiness call — choose contact method"
           data-ocid="final_cta.book_call.button"
           className="inline-flex items-center gap-3 bg-white text-finland-blue px-10 py-5 rounded-xl text-lg font-bold hover:bg-finland-blue-light transition-all duration-200 shadow-finland-lg hover:shadow-finland-glow mb-4"
         >
           <Mail aria-hidden="true" className="w-6 h-6" />
           Book Your Free 15-Minute Launch Readiness Call
-        </a>
+        </button>
 
         <p className="text-white/60 text-sm mb-10">
           Or email us directly at{" "}
@@ -85,6 +90,11 @@ export default function FinalCTASection() {
           })}
         </ul>
       </div>
+
+      <ContactMethodModal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+      />
     </section>
   );
 }
