@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.625rem;
+        --background: 0 0% 100%;
+        --foreground: 222 47% 11%;
+        --card: 0 0% 100%;
+        --card-foreground: 222 47% 11%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222 47% 11%;
+        --primary: 214 84% 25%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 214 32% 91%;
+        --secondary-foreground: 214 84% 25%;
+        --muted: 214 32% 95%;
+        --muted-foreground: 215 20% 45%;
+        --accent: 214 32% 91%;
+        --accent-foreground: 214 84% 25%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 214 32% 88%;
+        --input: 214 32% 88%;
+        --ring: 214 84% 25%;
+        --chart-1: 24 90% 53%;
+        --chart-2: 190 70% 40%;
+        --chart-3: 220 60% 40%;
+        --chart-4: 42 80% 58%;
+        --chart-5: 35 80% 55%;
+        --sidebar: 0 0% 98%;
+        --sidebar-foreground: 222 47% 11%;
+        --sidebar-primary: 214 84% 25%;
+        --sidebar-primary-foreground: 0 0% 98%;
+        --sidebar-accent: 214 32% 91%;
+        --sidebar-accent-foreground: 214 84% 25%;
+        --sidebar-border: 214 32% 88%;
+        --sidebar-ring: 214 84% 25%;
+    }
+
+    .dark {
+        --background: 222 47% 11%;
+        --foreground: 0 0% 98%;
+        --card: 222 47% 15%;
+        --card-foreground: 0 0% 98%;
+        --popover: 222 47% 18%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 214 84% 60%;
+        --primary-foreground: 222 47% 11%;
+        --secondary: 222 47% 20%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 222 47% 20%;
+        --muted-foreground: 215 20% 65%;
+        --accent: 222 47% 25%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 70% 55%;
+        --destructive-foreground: 222 47% 11%;
+        --border: 0 0% 100% / 10%;
+        --input: 0 0% 100% / 15%;
+        --ring: 215 20% 55%;
+        --chart-1: 245 70% 65%;
+        --chart-2: 162 60% 50%;
+        --chart-3: 35 80% 55%;
+        --chart-4: 290 60% 60%;
+        --chart-5: 15 70% 60%;
+        --sidebar: 222 47% 15%;
+        --sidebar-foreground: 0 0% 98%;
+        --sidebar-primary: 245 70% 65%;
+        --sidebar-primary-foreground: 0 0% 98%;
+        --sidebar-accent: 222 47% 20%;
+        --sidebar-accent-foreground: 0 0% 98%;
+        --sidebar-border: 0 0% 100% / 10%;
+        --sidebar-ring: 215 20% 45%;
+    }
+
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+.gradient-hero-finland {
+    background: linear-gradient(
+        135deg,
+        rgba(0, 53, 128, 0.92) 0%,
+        rgba(0, 32, 96, 0.88) 60%,
+        rgba(0, 53, 128, 0.80) 100%
+    );
+}

@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("/assets/fonts/CabinetGrotesk-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@layer base {
+  :root {
+    /* Finnish flag blue and white theme */
+    --background: oklch(100% 0 0);
+    --foreground: oklch(18% 0.04 250);
+
+    --card: oklch(100% 0 0);
+    --card-foreground: oklch(18% 0.04 250);
+
+    --popover: oklch(100% 0 0);
+    --popover-foreground: oklch(18% 0.04 250);
+
+    /* Finnish blue: #003580 */
+    --primary: oklch(30% 0.12 255);
+    --primary-foreground: oklch(100% 0 0);
+
+    --secondary: oklch(94% 0.03 250);
+    --secondary-foreground: oklch(30% 0.12 255);
+
+    --muted: oklch(95% 0.02 250);
+    --muted-foreground: oklch(50% 0.06 250);
+
+    --accent: oklch(30% 0.12 255);
+    --accent-foreground: oklch(100% 0 0);
+
+    --destructive: oklch(55% 0.22 25);
+    --destructive-foreground: oklch(100% 0 0);
+
+    --border: oklch(88% 0.04 250);
+    --input: oklch(88% 0.04 250);
+    --ring: oklch(30% 0.12 255);
+
+    --radius: 0.5rem;
+
+    /* Finnish blue tints */
+    --finland-blue: oklch(30% 0.12 255);
+    --finland-blue-light: oklch(94% 0.04 250);
+    --finland-blue-mid: oklch(85% 0.06 250);
+    --finland-blue-dark: oklch(22% 0.1 255);
+    --finland-white: oklch(100% 0 0);
+    --finland-off-white: oklch(97% 0.01 250);
+  }
+
+  .dark {
+    --background: oklch(18% 0.04 255);
+    --foreground: oklch(97% 0.01 250);
+
+    --card: oklch(22% 0.05 255);
+    --card-foreground: oklch(97% 0.01 250);
+
+    --popover: oklch(22% 0.05 255);
+    --popover-foreground: oklch(97% 0.01 250);
+
+    --primary: oklch(65% 0.14 255);
+    --primary-foreground: oklch(100% 0 0);
+
+    --secondary: oklch(28% 0.06 255);
+    --secondary-foreground: oklch(97% 0.01 250);
+
+    --muted: oklch(28% 0.06 255);
+    --muted-foreground: oklch(65% 0.06 250);
+
+    --accent: oklch(65% 0.14 255);
+    --accent-foreground: oklch(100% 0 0);
+
+    --destructive: oklch(55% 0.22 25);
+    --destructive-foreground: oklch(100% 0 0);
+
+    --border: oklch(30% 0.07 255);
+    --input: oklch(30% 0.07 255);
+    --ring: oklch(65% 0.14 255);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "General Sans", sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Cabinet Grotesk", sans-serif;
+  }
+
+  /* Global accessible focus ring — WCAG 2.1 AA */
+  :focus-visible {
+    outline: 3px solid oklch(30% 0.12 255);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer utilities {
+  /* Finnish blue gradient */
+  .gradient-finland {
+    background: linear-gradient(
+      135deg,
+      oklch(30% 0.12 255) 0%,
+      oklch(40% 0.14 255) 100%
+    );
+  }
+
+  .gradient-finland-light {
+    background: linear-gradient(
+      135deg,
+      oklch(94% 0.04 250) 0%,
+      oklch(100% 0 0) 100%
+    );
+  }
+
+  .gradient-hero-finland {
+    background: linear-gradient(
+      to bottom,
+      oklch(30% 0.12 255 / 0.75) 0%,
+      oklch(22% 0.1 255 / 0.85) 100%
+    );
+  }
+
+  /* Card hover effect */
+  .card-hover {
+    @apply transition-all duration-300;
+  }
+  .card-hover:hover {
+    @apply shadow-finland -translate-y-1;
+  }
+
+  /* Blue glow */
+  .glow-finland {
+    box-shadow: 0 0 40px oklch(30% 0.12 255 / 0.25), 0 0 80px
+      oklch(30% 0.12 255 / 0.12);
+  }
+
+  /* Section alternating backgrounds */
+  .section-white {
+    background-color: oklch(100% 0 0);
+  }
+  .section-light-blue {
+    background-color: oklch(96% 0.03 250);
+  }
+  .section-finland-blue {
+    background-color: oklch(30% 0.12 255);
+  }
+
+  /* Fade in animation */
+  .fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
