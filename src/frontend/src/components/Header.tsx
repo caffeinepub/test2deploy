@@ -2,14 +2,25 @@ import { Mail, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import ContactMethodModal from "./ContactMethodModal";
 
-const navLinks = [
-  { label: "Who We Help", href: "#who-we-help" },
-  { label: "Services", href: "#services" },
-  { label: "Why Us", href: "#why-different" },
-  { label: "Outcomes", href: "#outcomes" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Use Cases", href: "#use-cases" },
-  { label: "Contact", href: "#contact" },
+// Desktop nav: 5 key items to prevent overflow and maintain clear hierarchy
+const desktopNavLinks = [
+  { label: "Services", href: "#services", ocid: "header.nav.link.1" },
+  { label: "Who We Help", href: "#who-we-help", ocid: "header.nav.link.2" },
+  { label: "How It Works", href: "#how-it-works", ocid: "header.nav.link.3" },
+  { label: "FAQ", href: "#faq", ocid: "header.faq.link" },
+  { label: "Contact", href: "#contact", ocid: "header.nav.link.5" },
+];
+
+// Mobile nav: full list for discoverability and SEO accessibility
+const mobileNavLinks = [
+  { label: "Who We Help", href: "#who-we-help", ocid: "header.nav.link.2" },
+  { label: "Services", href: "#services", ocid: "header.nav.link.1" },
+  { label: "Why Us", href: "#why-different", ocid: "header.nav.link.6" },
+  { label: "Outcomes", href: "#outcomes", ocid: "header.nav.link.7" },
+  { label: "How It Works", href: "#how-it-works", ocid: "header.nav.link.3" },
+  { label: "Use Cases", href: "#use-cases", ocid: "header.nav.link.8" },
+  { label: "Contact", href: "#contact", ocid: "header.nav.link.5" },
+  { label: "FAQ", href: "#faq", ocid: "header.faq.link" },
 ];
 
 export default function Header() {
@@ -33,23 +44,25 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white shadow-finland border-b border-finland-blue-mid"
-          : "bg-white/95 backdrop-blur-sm"
+          ? "bg-[#001d4a] shadow-lg border-b border-[#003580]"
+          : "bg-[#001d4a]/98 backdrop-blur-sm"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
+          {/* Logo — dark logo blends naturally with the navy header */}
           <div className="flex items-center gap-3">
-            <img
-              src="/assets/Company Logo.jpg"
-              alt="Test2Deploy logo"
-              className="h-10 lg:h-12 w-auto object-contain"
-              style={{ maxWidth: "180px" }}
-            />
+            <div>
+              <img
+                src="/assets/generated/test2deploy-logo-transparent.dim_400x200.png"
+                alt="Test2Deploy logo"
+                className="h-12 lg:h-14 w-auto object-contain"
+                style={{ maxWidth: "200px" }}
+              />
+            </div>
             <span
               aria-hidden="true"
-              className="hidden xl:block text-sm text-finland-blue font-medium italic border-l border-finland-blue-mid pl-3"
+              className="hidden xl:block text-sm text-white/80 font-medium italic border-l border-white/20 pl-3"
             >
               Deploy with confidence – every time
             </span>
@@ -58,20 +71,20 @@ export default function Header() {
           {/* Desktop Nav */}
           <nav
             aria-label="Main navigation"
-            className="hidden lg:flex items-center gap-6"
+            className="hidden lg:flex items-center gap-7"
           >
-            {navLinks.map((link, index) => (
+            {desktopNavLinks.map((link) => (
               <button
                 key={link.href}
                 type="button"
                 onClick={() => handleNavClick(link.href)}
-                data-ocid={`header.nav.link.${index + 1}`}
-                className="text-sm font-medium text-gray-700 hover:text-finland-blue transition-colors duration-200 relative group"
+                data-ocid={link.ocid}
+                className="text-sm font-medium text-white/80 hover:text-white transition-colors duration-200 relative group"
               >
                 {link.label}
                 <span
                   aria-hidden="true"
-                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-finland-blue group-hover:w-full transition-all duration-200"
+                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-200"
                 />
               </button>
             ))}
@@ -84,7 +97,7 @@ export default function Header() {
               onClick={() => setModalOpen(true)}
               aria-label="Book a free call — choose contact method"
               data-ocid="header.book_call.button"
-              className="flex items-center gap-2 bg-finland-blue text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-finland-blue-dark transition-colors duration-200 shadow-finland"
+              className="flex items-center gap-2 bg-white text-[#003580] px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-white/90 transition-colors duration-200 shadow-lg"
             >
               <Mail aria-hidden="true" className="w-4 h-4" />
               Book a Free Call
@@ -94,7 +107,7 @@ export default function Header() {
           {/* Mobile hamburger */}
           <button
             type="button"
-            className="lg:hidden p-2 rounded-lg text-finland-blue hover:bg-finland-blue-light transition-colors"
+            className="lg:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
@@ -114,22 +127,22 @@ export default function Header() {
       {mobileOpen && (
         <div
           id="mobile-menu"
-          className="lg:hidden bg-white border-t border-finland-blue-mid shadow-finland-lg"
+          className="lg:hidden bg-[#001d4a] border-t border-white/10 shadow-lg"
         >
           <nav aria-label="Mobile navigation">
             <div className="px-4 py-4 space-y-1">
-              {navLinks.map((link, index) => (
+              {mobileNavLinks.map((link) => (
                 <button
                   key={link.href}
                   type="button"
                   onClick={() => handleNavClick(link.href)}
-                  data-ocid={`header.nav.link.${index + 1}`}
-                  className="block w-full text-left px-4 py-3 text-sm font-medium text-gray-700 hover:text-finland-blue hover:bg-finland-blue-light rounded-lg transition-colors"
+                  data-ocid={link.ocid}
+                  className="block w-full text-left px-4 py-3 text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
                 >
                   {link.label}
                 </button>
               ))}
-              <div className="pt-3 border-t border-finland-blue-mid">
+              <div className="pt-3 border-t border-white/10">
                 <button
                   type="button"
                   onClick={() => {
@@ -137,7 +150,7 @@ export default function Header() {
                     setModalOpen(true);
                   }}
                   aria-label="Book a free call — choose contact method"
-                  className="flex items-center justify-center gap-2 bg-finland-blue text-white px-5 py-3 rounded-lg text-sm font-semibold hover:bg-finland-blue-dark transition-colors w-full"
+                  className="flex items-center justify-center gap-2 bg-white text-[#003580] px-5 py-3 rounded-lg text-sm font-semibold hover:bg-white/90 transition-colors w-full"
                 >
                   <Mail aria-hidden="true" className="w-4 h-4" />
                   Book a Free Call

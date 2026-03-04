@@ -29,10 +29,10 @@ export default function Footer() {
           <div className="md:col-span-1">
             <div className="mb-4">
               <img
-                src="/assets/uploads/Company-Logo-2-1.jpg"
+                src="/assets/generated/test2deploy-logo-transparent.dim_400x200.png"
                 alt="Test2Deploy logo"
                 className="h-14 w-auto object-contain"
-                style={{ maxWidth: "180px" }}
+                style={{ maxWidth: "200px" }}
               />
             </div>
             <p className="text-white/70 italic text-sm mb-5">
