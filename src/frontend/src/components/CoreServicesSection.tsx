@@ -69,7 +69,11 @@ const services = [
 
 export default function CoreServicesSection() {
   return (
-    <section id="services" className="section-white py-20 lg:py-28">
+    <section
+      id="services"
+      className="py-20 lg:py-28"
+      style={{ backgroundColor: "#ffffff" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-14">
@@ -79,7 +83,7 @@ export default function CoreServicesSection() {
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-finland-blue leading-tight">
             Productized QA Packages
           </h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-lg">
+          <p className="mt-4 text-finland-blue/70 max-w-2xl mx-auto text-lg">
             Clear pricing, defined scope, and fast delivery — no surprises.
           </p>
         </div>

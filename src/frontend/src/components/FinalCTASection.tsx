@@ -13,7 +13,10 @@ export default function FinalCTASection() {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <section className="section-finland-blue py-20 lg:py-28 relative overflow-hidden">
+    <section
+      className="py-20 lg:py-28 relative overflow-hidden"
+      style={{ backgroundColor: "#003580" }}
+    >
       {/* Subtle cross pattern inspired by Finnish flag — decorative */}
       <div aria-hidden="true" className="absolute inset-0 opacity-5">
         <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-white" />
@@ -28,7 +31,13 @@ export default function FinalCTASection() {
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white px-4 py-2 rounded-full text-sm font-medium mb-8">
+        <div
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-8 text-white"
+          style={{
+            background: "rgba(255,255,255,0.15)",
+            border: "1px solid rgba(255,255,255,0.30)",
+          }}
+        >
           <span
             aria-hidden="true"
             role="presentation"
@@ -42,7 +51,10 @@ export default function FinalCTASection() {
           Ready to Ship With Confidence?
         </h2>
 
-        <p className="text-white/80 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p
+          className="text-lg max-w-2xl mx-auto mb-10 leading-relaxed text-white"
+          style={{ opacity: 0.85 }}
+        >
           Book a free 15-minute launch readiness call. We'll review your
           product, identify the biggest quality risks, and recommend the right
           QA approach — no strings attached.
@@ -54,18 +66,19 @@ export default function FinalCTASection() {
           onClick={() => setModalOpen(true)}
           aria-label="Book your free 15-minute launch readiness call — choose contact method"
           data-ocid="final_cta.book_call.button"
-          className="inline-flex items-center gap-3 bg-white text-finland-blue px-10 py-5 rounded-xl text-lg font-bold hover:bg-finland-blue-light transition-all duration-200 shadow-finland-lg hover:shadow-finland-glow mb-4"
+          className="inline-flex items-center gap-3 bg-white text-finland-blue px-10 py-5 rounded-xl text-lg font-bold hover:bg-finland-blue-light transition-all duration-200 shadow-finland-lg mb-4"
         >
           <Mail aria-hidden="true" className="w-6 h-6" />
           Book Your Free 15-Minute Launch Readiness Call
         </button>
 
-        <p className="text-white/60 text-sm mb-10">
+        <p className="text-sm mb-10 text-white" style={{ opacity: 0.7 }}>
           Or email us directly at{" "}
           <a
             href="mailto:pankaj.kumar@test2deploy.eu"
             aria-label="Email pankaj.kumar@test2deploy.eu"
-            className="text-white/80 underline hover:text-white transition-colors"
+            className="underline text-white hover:opacity-100 transition-opacity"
+            style={{ opacity: 0.85 }}
           >
             pankaj.kumar@test2deploy.eu
           </a>
@@ -78,12 +91,13 @@ export default function FinalCTASection() {
             return (
               <li
                 key={pill.label}
-                className="flex items-center gap-2 bg-white/15 border border-white/25 text-white px-4 py-2 rounded-full text-sm font-medium"
+                className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-white"
+                style={{
+                  background: "rgba(255,255,255,0.15)",
+                  border: "1px solid rgba(255,255,255,0.25)",
+                }}
               >
-                <Icon
-                  aria-hidden="true"
-                  className="w-4 h-4 text-finland-blue-mid"
-                />
+                <Icon aria-hidden="true" className="w-4 h-4 text-white" />
                 {pill.label}
               </li>
             );

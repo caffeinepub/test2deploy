@@ -105,7 +105,8 @@ export default function ContactFormSection() {
     <section
       id="contact"
       data-ocid="contact.section"
-      className="section-white py-20 lg:py-28"
+      className="py-20 lg:py-28"
+      style={{ backgroundColor: "#ffffff" }}
     >
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -117,7 +118,7 @@ export default function ContactFormSection() {
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-finland-blue leading-tight mb-4">
             Let's Talk About Your Project
           </h2>
-          <p className="text-gray-600 text-lg max-w-xl mx-auto leading-relaxed">
+          <p className="text-finland-blue/70 text-lg max-w-xl mx-auto leading-relaxed">
             Tell us about your product and timeline. We'll get back to you
             within 24 hours with a tailored recommendation.
           </p>
@@ -140,7 +141,7 @@ export default function ContactFormSection() {
               <h3 className="font-heading text-2xl font-bold text-finland-blue mb-3">
                 Message Sent!
               </h3>
-              <p className="text-gray-600 text-lg max-w-sm mb-6">
+              <p className="text-finland-blue/70 text-lg max-w-sm mb-6">
                 Thank you! We'll be in touch within 24 hours.
               </p>
               <div className="flex flex-col sm:flex-row items-center gap-4 text-sm text-gray-500">
@@ -176,7 +177,7 @@ export default function ContactFormSection() {
                 <div className="space-y-1.5">
                   <Label
                     htmlFor="contact-name"
-                    className="text-sm font-semibold text-gray-700"
+                    className="text-sm font-semibold text-finland-blue"
                   >
                     Name{" "}
                     <span className="text-red-500" aria-hidden="true">
@@ -215,7 +216,7 @@ export default function ContactFormSection() {
                 <div className="space-y-1.5">
                   <Label
                     htmlFor="contact-email"
-                    className="text-sm font-semibold text-gray-700"
+                    className="text-sm font-semibold text-finland-blue"
                   >
                     Email{" "}
                     <span className="text-red-500" aria-hidden="true">
@@ -257,7 +258,7 @@ export default function ContactFormSection() {
                 <div className="space-y-1.5">
                   <Label
                     htmlFor="contact-phone"
-                    className="text-sm font-semibold text-gray-700"
+                    className="text-sm font-semibold text-finland-blue"
                   >
                     Phone{" "}
                     <span className="text-gray-400 font-normal text-xs">
@@ -280,7 +281,7 @@ export default function ContactFormSection() {
                 <div className="space-y-1.5">
                   <Label
                     htmlFor="contact-subject"
-                    className="text-sm font-semibold text-gray-700"
+                    className="text-sm font-semibold text-finland-blue"
                   >
                     Subject{" "}
                     <span className="text-red-500" aria-hidden="true">
@@ -329,7 +330,7 @@ export default function ContactFormSection() {
               <div className="space-y-1.5">
                 <Label
                   htmlFor="contact-message"
-                  className="text-sm font-semibold text-gray-700"
+                  className="text-sm font-semibold text-finland-blue"
                 >
                   Message{" "}
                   <span className="text-red-500" aria-hidden="true">
@@ -393,7 +394,7 @@ export default function ContactFormSection() {
         </div>
 
         {/* Contact details strip */}
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-500">
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-finland-blue/70">
           <a
             href="mailto:pankaj.kumar@test2deploy.eu"
             aria-label="Email pankaj.kumar@test2deploy.eu"

@@ -33,7 +33,11 @@ const steps = [
 
 export default function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="section-light-blue py-20 lg:py-28">
+    <section
+      id="how-it-works"
+      className="py-20 lg:py-28"
+      style={{ backgroundColor: "#f0f5ff" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-14">
@@ -43,7 +47,7 @@ export default function HowItWorksSection() {
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-finland-blue leading-tight">
             How It Works
           </h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-lg">
+          <p className="mt-4 text-finland-blue/70 max-w-2xl mx-auto text-lg">
             A simple, transparent process designed to get you results fast.
           </p>
         </div>
@@ -80,7 +84,7 @@ export default function HowItWorksSection() {
                   <h3 className="font-heading text-lg font-bold text-finland-blue mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-finland-blue/65 text-sm leading-relaxed">
                     {step.description}
                   </p>
                 </li>

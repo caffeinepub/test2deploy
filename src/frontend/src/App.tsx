@@ -1,5 +1,6 @@
 import ContactFormSection from "./components/ContactFormSection";
 import CoreServicesSection from "./components/CoreServicesSection";
+import FAQSection from "./components/FAQSection";
 import FinalCTASection from "./components/FinalCTASection";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -31,6 +32,7 @@ export default function App() {
         <HowItWorksSection />
         <IdealUseCasesSection />
         <ContactFormSection />
+        <FAQSection />
         <FinalCTASection />
       </main>
       <Footer />

@@ -40,7 +40,11 @@ const differentiators = [
 
 export default function WhyDifferentSection() {
   return (
-    <section id="why-different" className="section-light-blue py-20 lg:py-28">
+    <section
+      id="why-different"
+      className="py-20 lg:py-28"
+      style={{ backgroundColor: "#f0f5ff" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-14">
@@ -50,7 +54,7 @@ export default function WhyDifferentSection() {
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-finland-blue leading-tight">
             Why Test2Deploy is Different
           </h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-lg">
+          <p className="mt-4 text-finland-blue/70 max-w-2xl mx-auto text-lg">
             We're not just testers — we're quality partners who care about your
             launch success.
           </p>
@@ -83,7 +87,7 @@ export default function WhyDifferentSection() {
                 <h3 className="font-heading text-lg font-bold text-finland-blue mb-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-finland-blue/65 text-sm leading-relaxed">
                   {item.description}
                 </p>
               </li>

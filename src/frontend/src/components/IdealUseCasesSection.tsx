@@ -56,7 +56,11 @@ const benefits = [
 
 export default function IdealUseCasesSection() {
   return (
-    <section id="use-cases" className="section-white py-20 lg:py-28">
+    <section
+      id="use-cases"
+      className="py-20 lg:py-28"
+      style={{ backgroundColor: "#f0f5ff" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-14">
@@ -66,7 +70,7 @@ export default function IdealUseCasesSection() {
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-finland-blue leading-tight">
             Ideal Use Cases
           </h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-lg">
+          <p className="mt-4 text-finland-blue/70 max-w-2xl mx-auto text-lg">
             We've helped teams across these scenarios ship with confidence.
           </p>
         </div>
@@ -89,7 +93,7 @@ export default function IdealUseCasesSection() {
                 <h3 className="font-heading text-lg font-bold text-finland-blue mb-2">
                   {useCase.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-finland-blue/65 text-sm leading-relaxed">
                   {useCase.description}
                 </p>
               </li>
@@ -102,7 +106,7 @@ export default function IdealUseCasesSection() {
           <h3 className="font-heading text-xl font-bold text-finland-blue mb-2">
             Why Not Hiring QA Yet Is Okay
           </h3>
-          <p className="text-gray-600 mb-6">
+          <p className="text-finland-blue/70 mb-6">
             Many fast-moving teams can't justify a full-time QA hire. That's
             exactly why Test2Deploy exists — to give you enterprise-grade
             quality without the overhead.
@@ -114,7 +118,7 @@ export default function IdealUseCasesSection() {
                   aria-hidden="true"
                   className="w-5 h-5 text-finland-blue flex-shrink-0 mt-0.5"
                 />
-                <span className="text-gray-700 text-sm">{benefit}</span>
+                <span className="text-finland-blue/75 text-sm">{benefit}</span>
               </li>
             ))}
           </ul>

@@ -21,74 +21,75 @@
 @layer base {
   :root {
     /* Finnish flag blue and white theme */
-    --background: oklch(100% 0 0);
-    --foreground: oklch(18% 0.04 250);
+    /* HSL values — consumed by hsl(var(--...)) in tailwind.config.js */
+    --background: 0 0% 100%;
+    --foreground: 220 20% 10%;
 
-    --card: oklch(100% 0 0);
-    --card-foreground: oklch(18% 0.04 250);
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
 
-    --popover: oklch(100% 0 0);
-    --popover-foreground: oklch(18% 0.04 250);
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
 
     /* Finnish blue: #003580 */
-    --primary: oklch(30% 0.12 255);
-    --primary-foreground: oklch(100% 0 0);
+    --primary: 216 100% 25%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: oklch(94% 0.03 250);
-    --secondary-foreground: oklch(30% 0.12 255);
+    --secondary: 216 40% 94%;
+    --secondary-foreground: 216 100% 25%;
 
-    --muted: oklch(95% 0.02 250);
-    --muted-foreground: oklch(50% 0.06 250);
+    --muted: 216 30% 95%;
+    --muted-foreground: 216 20% 45%;
 
-    --accent: oklch(30% 0.12 255);
-    --accent-foreground: oklch(100% 0 0);
+    --accent: 216 100% 25%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: oklch(55% 0.22 25);
-    --destructive-foreground: oklch(100% 0 0);
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: oklch(88% 0.04 250);
-    --input: oklch(88% 0.04 250);
-    --ring: oklch(30% 0.12 255);
+    --border: 216 40% 88%;
+    --input: 216 40% 88%;
+    --ring: 216 100% 25%;
 
     --radius: 0.5rem;
 
-    /* Finnish blue tints */
-    --finland-blue: oklch(30% 0.12 255);
-    --finland-blue-light: oklch(94% 0.04 250);
-    --finland-blue-mid: oklch(85% 0.06 250);
-    --finland-blue-dark: oklch(22% 0.1 255);
-    --finland-white: oklch(100% 0 0);
-    --finland-off-white: oklch(97% 0.01 250);
+    /* Finnish blue tints (direct hex for non-Tailwind use) */
+    --finland-blue: #003580;
+    --finland-blue-light: #e8f0fa;
+    --finland-blue-mid: #c5d8f5;
+    --finland-blue-dark: #002060;
+    --finland-white: #ffffff;
+    --finland-off-white: #f5f8ff;
   }
 
   .dark {
-    --background: oklch(18% 0.04 255);
-    --foreground: oklch(97% 0.01 250);
+    --background: 216 30% 10%;
+    --foreground: 216 20% 97%;
 
-    --card: oklch(22% 0.05 255);
-    --card-foreground: oklch(97% 0.01 250);
+    --card: 216 30% 13%;
+    --card-foreground: 216 20% 97%;
 
-    --popover: oklch(22% 0.05 255);
-    --popover-foreground: oklch(97% 0.01 250);
+    --popover: 216 30% 13%;
+    --popover-foreground: 216 20% 97%;
 
-    --primary: oklch(65% 0.14 255);
-    --primary-foreground: oklch(100% 0 0);
+    --primary: 216 80% 65%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: oklch(28% 0.06 255);
-    --secondary-foreground: oklch(97% 0.01 250);
+    --secondary: 216 25% 20%;
+    --secondary-foreground: 216 20% 97%;
 
-    --muted: oklch(28% 0.06 255);
-    --muted-foreground: oklch(65% 0.06 250);
+    --muted: 216 25% 20%;
+    --muted-foreground: 216 20% 65%;
 
-    --accent: oklch(65% 0.14 255);
-    --accent-foreground: oklch(100% 0 0);
+    --accent: 216 80% 65%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: oklch(55% 0.22 25);
-    --destructive-foreground: oklch(100% 0 0);
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: oklch(30% 0.07 255);
-    --input: oklch(30% 0.07 255);
-    --ring: oklch(65% 0.14 255);
+    --border: 216 30% 22%;
+    --input: 216 30% 22%;
+    --ring: 216 80% 65%;
   }
 }
 
@@ -111,7 +112,7 @@
 
   /* Global accessible focus ring — WCAG 2.1 AA */
   :focus-visible {
-    outline: 3px solid oklch(30% 0.12 255);
+    outline: 3px solid #003580;
     outline-offset: 2px;
     border-radius: 4px;
   }
@@ -120,26 +121,18 @@
 @layer utilities {
   /* Finnish blue gradient */
   .gradient-finland {
-    background: linear-gradient(
-      135deg,
-      oklch(30% 0.12 255) 0%,
-      oklch(40% 0.14 255) 100%
-    );
+    background: linear-gradient(135deg, #003580 0%, #004099 100%);
   }
 
   .gradient-finland-light {
-    background: linear-gradient(
-      135deg,
-      oklch(94% 0.04 250) 0%,
-      oklch(100% 0 0) 100%
-    );
+    background: linear-gradient(135deg, #e8f0fa 0%, #ffffff 100%);
   }
 
   .gradient-hero-finland {
     background: linear-gradient(
       to bottom,
-      oklch(30% 0.12 255 / 0.75) 0%,
-      oklch(22% 0.1 255 / 0.85) 100%
+      rgba(0, 53, 128, 0.75) 0%,
+      rgba(0, 32, 96, 0.85) 100%
     );
   }
 
@@ -153,19 +146,18 @@
 
   /* Blue glow */
   .glow-finland {
-    box-shadow: 0 0 40px oklch(30% 0.12 255 / 0.25), 0 0 80px
-      oklch(30% 0.12 255 / 0.12);
+    box-shadow: 0 0 40px rgba(0, 53, 128, 0.25), 0 0 80px rgba(0, 53, 128, 0.12);
   }
 
   /* Section alternating backgrounds */
   .section-white {
-    background-color: oklch(100% 0 0);
+    background-color: #ffffff;
   }
   .section-light-blue {
-    background-color: oklch(96% 0.03 250);
+    background-color: #f0f5ff;
   }
   .section-finland-blue {
-    background-color: oklch(30% 0.12 255);
+    background-color: #003580;
   }
 
   /* Fade in animation */
@@ -181,6 +173,17 @@
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  /* Respect reduced motion — never hide content */
+  @media (prefers-reduced-motion: reduce) {
+    .fade-in,
+    .animate-fade-in,
+    .animate-fade-in-up {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
     }
   }
 }

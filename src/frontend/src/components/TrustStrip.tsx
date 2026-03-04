@@ -10,7 +10,14 @@ const industries = [
 
 export default function TrustStrip() {
   return (
-    <section className="bg-finland-blue py-5 border-y border-finland-blue-dark">
+    <section
+      className="py-5"
+      style={{
+        backgroundColor: "#003580",
+        borderTop: "1px solid #002060",
+        borderBottom: "1px solid #002060",
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 flex-wrap">
           <span className="text-white/80 text-sm font-medium whitespace-nowrap">

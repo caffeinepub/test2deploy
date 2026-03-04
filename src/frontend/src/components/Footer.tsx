@@ -22,18 +22,17 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-finland-blue text-white">
+    <footer style={{ backgroundColor: "#003580", color: "#ffffff" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div className="md:col-span-1">
-            {/* White background pill to make the logo visible on dark footer */}
-            <div className="inline-block bg-white rounded-lg px-3 py-2 mb-4">
+            <div className="mb-4">
               <img
-                src="/assets/Company Logo.jpg"
+                src="/assets/uploads/Company-Logo-2-1.jpg"
                 alt="Test2Deploy logo"
-                className="h-9 w-auto object-contain"
-                style={{ maxWidth: "160px" }}
+                className="h-14 w-auto object-contain"
+                style={{ maxWidth: "180px" }}
               />
             </div>
             <p className="text-white/70 italic text-sm mb-5">

@@ -29,7 +29,11 @@ const audiences = [
 
 export default function WhoWeHelpSection() {
   return (
-    <section id="who-we-help" className="section-light-blue py-20 lg:py-28">
+    <section
+      id="who-we-help"
+      className="py-20 lg:py-28"
+      style={{ backgroundColor: "#f0f5ff" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-14">
@@ -39,7 +43,7 @@ export default function WhoWeHelpSection() {
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-finland-blue leading-tight">
             Built for Teams That Move Fast
           </h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-lg">
+          <p className="mt-4 text-finland-blue/70 max-w-2xl mx-auto text-lg">
             Whether you're a solo founder or a growing product team, Test2Deploy
             fits into your workflow.
           </p>
@@ -63,7 +67,7 @@ export default function WhoWeHelpSection() {
                 <h3 className="font-heading text-lg font-bold text-finland-blue mb-2">
                   {audience.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-finland-blue/65 text-sm leading-relaxed">
                   {audience.description}
                 </p>
               </li>

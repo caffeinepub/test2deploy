@@ -75,7 +75,7 @@ export default function ContactMethodModal({
               <div className="font-semibold text-finland-blue text-sm">
                 Send an Email
               </div>
-              <div className="text-xs text-gray-500 truncate">
+              <div className="text-xs text-finland-blue/60 truncate">
                 pankaj.kumar@test2deploy.eu
               </div>
             </div>
@@ -102,7 +102,9 @@ export default function ContactMethodModal({
               <div className="font-semibold text-finland-blue text-sm">
                 Call Us
               </div>
-              <div className="text-xs text-gray-500">+358 41 728 0893</div>
+              <div className="text-xs text-finland-blue/60">
+                +358 41 728 0893
+              </div>
             </div>
             <div
               className="ml-auto text-finland-blue-mid group-hover:text-finland-blue transition-colors"
@@ -130,7 +132,7 @@ export default function ContactMethodModal({
               <div className="font-semibold text-finland-blue text-sm">
                 Send a Message
               </div>
-              <div className="text-xs text-gray-500">
+              <div className="text-xs text-finland-blue/60">
                 Fill out the contact form below
               </div>
             </div>
@@ -145,7 +147,7 @@ export default function ContactMethodModal({
 
         {/* Footer note */}
         <div className="px-5 pb-5 pt-0 bg-white">
-          <p className="text-center text-xs text-gray-400">
+          <p className="text-center text-xs text-finland-blue/50">
             🇫🇮 Based in Finland — available Mon–Fri, 9am–5pm EET
           </p>
         </div>

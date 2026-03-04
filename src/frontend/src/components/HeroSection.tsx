@@ -22,32 +22,57 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Background image */}
+      {/* Rich CSS gradient background — Finnish deep blue sky */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(135deg, #001d4a 0%, #003580 40%, #0047a8 70%, #1a5cb5 100%)",
+        }}
+      />
+
+      {/* Optional image layer — loads on top if image exists */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
         style={{
           backgroundImage:
             "url('/assets/generated/hero-bg-finland.dim_1920x1080.png')",
         }}
       />
 
-      {/* Finnish blue overlay */}
+      {/* Radial light bloom — adds depth to gradient */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 gradient-hero-finland"
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 80% 60% at 50% 20%, rgba(26,92,181,0.45) 0%, transparent 70%)",
+        }}
       />
 
-      {/* Subtle cross pattern inspired by Finnish flag */}
-      <div aria-hidden="true" className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-1 bg-white" />
-        <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-1 bg-white" />
+      {/* Dot-grid texture overlay for visual richness */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 opacity-[0.07]"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle, #ffffff 1px, transparent 1px)",
+          backgroundSize: "40px 40px",
+        }}
+      />
+
+      {/* Finnish cross motif — subtle, symbolic */}
+      <div aria-hidden="true" className="absolute inset-0 opacity-[0.06]">
+        <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-white" />
+        <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-px bg-white" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/30 text-white px-4 py-2 rounded-full text-sm font-medium mb-8 animate-fade-in">
+        <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/30 text-white px-4 py-2 rounded-full text-sm font-medium mb-8">
           <span
             aria-hidden="true"
             role="presentation"
@@ -57,7 +82,7 @@ export default function HeroSection() {
         </div>
 
         {/* Headline */}
-        <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6 animate-fade-in">
+        <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6">
           Ship Software
           <br />
           <span className="text-finland-blue-mid">Without the Fear</span>
@@ -66,13 +91,13 @@ export default function HeroSection() {
         </h1>
 
         {/* Subheadline */}
-        <p className="text-lg sm:text-xl text-white/85 max-w-2xl mx-auto mb-8 leading-relaxed animate-fade-in">
+        <p className="text-lg sm:text-xl text-white/85 max-w-2xl mx-auto mb-8 leading-relaxed">
           Test2Deploy delivers fast, reliable QA testing so your team can launch
           with confidence — no full-time hire required.
         </p>
 
         {/* Checkpoints */}
-        <ul className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-10 animate-fade-in list-none">
+        <ul className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-10 list-none">
           {checkpoints.map((point) => (
             <li key={point} className="flex items-center gap-2 text-white/90">
               <CheckCircle
@@ -85,7 +110,7 @@ export default function HeroSection() {
         </ul>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             type="button"
             onClick={() => setModalOpen(true)}

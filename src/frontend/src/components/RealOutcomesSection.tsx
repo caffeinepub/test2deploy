@@ -10,7 +10,11 @@ const outcomes = [
 
 export default function RealOutcomesSection() {
   return (
-    <section id="outcomes" className="section-white py-20 lg:py-28">
+    <section
+      id="outcomes"
+      className="py-20 lg:py-28"
+      style={{ backgroundColor: "#ffffff" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left: Heading */}
@@ -21,7 +25,7 @@ export default function RealOutcomesSection() {
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-finland-blue leading-tight mb-6">
               What You Get After Working With Us
             </h2>
-            <p className="text-gray-600 text-lg leading-relaxed">
+            <p className="text-finland-blue/70 text-lg leading-relaxed">
               Our clients don't just get a bug report — they get a quality
               foundation that supports faster, safer shipping for the long term.
             </p>
