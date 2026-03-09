@@ -34,17 +34,13 @@ export default function Footer() {
           {/* Col 1 — Brand */}
           <div>
             <div className="mb-4">
-              <div
-                className="inline-block rounded-lg p-1.5"
-                style={{ backgroundColor: "#ffffff" }}
-              >
-                <img
-                  src="/assets/uploads/Company-Logo-2-1.jpg"
-                  alt="Test2Deploy logo"
-                  className="h-10 w-auto object-contain rounded"
-                  style={{ maxWidth: "150px" }}
-                />
-              </div>
+              {/* Logo — no wrapper div, displays naturally */}
+              <img
+                src="/assets/uploads/Company-Logo-2-1.jpg"
+                alt="Test2Deploy logo"
+                className="h-10 w-auto object-contain"
+                style={{ maxWidth: "150px" }}
+              />
             </div>
             <p className="text-white/70 italic text-sm mb-2">
               Deploy with confidence – every time

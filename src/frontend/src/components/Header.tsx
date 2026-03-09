@@ -58,19 +58,14 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo — shown directly on dark navy; logo has dark background that blends naturally */}
+          {/* Logo — no wrapper, logo has its own dark background that sits naturally on dark navy */}
           <div className="flex items-center gap-3">
-            <div
-              className="rounded-lg p-1"
-              style={{ backgroundColor: "#ffffff" }}
-            >
-              <img
-                src="/assets/uploads/Company-Logo-2-1.jpg"
-                alt="Test2Deploy logo"
-                className="h-10 lg:h-12 w-auto object-contain rounded"
-                style={{ maxWidth: "160px" }}
-              />
-            </div>
+            <img
+              src="/assets/uploads/Company-Logo-2-1.jpg"
+              alt="Test2Deploy logo"
+              className="h-10 lg:h-12 w-auto object-contain"
+              style={{ maxWidth: "160px" }}
+            />
             <span
               aria-hidden="true"
               className="hidden xl:block text-sm text-white/80 font-medium italic border-l border-white/20 pl-3"
