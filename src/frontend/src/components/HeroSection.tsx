@@ -83,17 +83,19 @@ export default function HeroSection() {
 
         {/* Headline */}
         <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6">
-          Ship Software
+          Reliable Software Testing
           <br />
-          <span className="text-finland-blue-mid">Without the Fear</span>
+          <span className="text-finland-blue-mid">
+            for Startups &amp; Growing
+          </span>
           <br />
-          of Breaking Things
+          Tech Teams
         </h1>
 
         {/* Subheadline */}
         <p className="text-lg sm:text-xl text-white/85 max-w-2xl mx-auto mb-8 leading-relaxed">
-          Test2Deploy delivers fast, reliable QA testing so your team can launch
-          with confidence — no full-time hire required.
+          We help teams release faster with manual testing, automation, and
+          scalable QA strategies — no full-time QA hire needed.
         </p>
 
         {/* Checkpoints */}

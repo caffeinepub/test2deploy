@@ -1,4 +1,18 @@
-import { Clock, Shield, Target, TrendingUp, Zap } from "lucide-react";
+import {
+  CheckCircle,
+  Clock,
+  Shield,
+  Target,
+  TrendingUp,
+  Zap,
+} from "lucide-react";
+
+const trustPills = [
+  "Startup-focused QA",
+  "Flexible engagement models",
+  "Automation-first mindset",
+  "Cost-efficient testing solutions",
+];
 
 const differentiators = [
   {
@@ -59,6 +73,30 @@ export default function WhyDifferentSection() {
             launch success.
           </p>
         </div>
+
+        {/* Trust checklist pills */}
+        <ul
+          className="flex flex-wrap justify-center gap-3 mb-12 list-none"
+          aria-label="Why Test2Deploy"
+        >
+          {trustPills.map((pill) => (
+            <li
+              key={pill}
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold border"
+              style={{
+                backgroundColor: "#e8f0fa",
+                color: "#003580",
+                borderColor: "#c5d8f5",
+              }}
+            >
+              <CheckCircle
+                className="w-4 h-4 text-finland-blue flex-shrink-0"
+                aria-hidden="true"
+              />
+              {pill}
+            </li>
+          ))}
+        </ul>
 
         {/* Cards */}
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 list-none">

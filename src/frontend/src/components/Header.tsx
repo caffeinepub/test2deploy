@@ -2,23 +2,31 @@ import { Mail, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import ContactMethodModal from "./ContactMethodModal";
 
-// Desktop nav: 5 key items to prevent overflow and maintain clear hierarchy
+// Desktop nav: 6 focused items for clear hierarchy
 const desktopNavLinks = [
   { label: "Services", href: "#services", ocid: "header.nav.link.1" },
   { label: "Who We Help", href: "#who-we-help", ocid: "header.nav.link.2" },
   { label: "How It Works", href: "#how-it-works", ocid: "header.nav.link.3" },
-  { label: "FAQ", href: "#faq", ocid: "header.faq.link" },
+  { label: "Blog", href: "#blog", ocid: "header.blog.link" },
   { label: "Contact", href: "#contact", ocid: "header.nav.link.5" },
+  { label: "FAQ", href: "#faq", ocid: "header.faq.link" },
 ];
 
 // Mobile nav: full list for discoverability and SEO accessibility
 const mobileNavLinks = [
+  { label: "About", href: "#founder", ocid: "header.about.link" },
   { label: "Who We Help", href: "#who-we-help", ocid: "header.nav.link.2" },
   { label: "Services", href: "#services", ocid: "header.nav.link.1" },
+  { label: "Industries", href: "#industries", ocid: "header.industries.link" },
+  { label: "Tools", href: "#tools", ocid: "header.tools.link" },
   { label: "Why Us", href: "#why-different", ocid: "header.nav.link.6" },
-  { label: "Outcomes", href: "#outcomes", ocid: "header.nav.link.7" },
+  {
+    label: "Testimonials",
+    href: "#testimonials",
+    ocid: "header.testimonials.link",
+  },
   { label: "How It Works", href: "#how-it-works", ocid: "header.nav.link.3" },
-  { label: "Use Cases", href: "#use-cases", ocid: "header.nav.link.8" },
+  { label: "Blog", href: "#blog", ocid: "header.blog.link" },
   { label: "Contact", href: "#contact", ocid: "header.nav.link.5" },
   { label: "FAQ", href: "#faq", ocid: "header.faq.link" },
 ];
@@ -50,14 +58,17 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo — dark logo blends naturally with the navy header */}
+          {/* Logo — shown directly on dark navy; logo has dark background that blends naturally */}
           <div className="flex items-center gap-3">
-            <div>
+            <div
+              className="rounded-lg p-1"
+              style={{ backgroundColor: "#ffffff" }}
+            >
               <img
-                src="/assets/generated/test2deploy-logo-transparent.dim_400x200.png"
+                src="/assets/uploads/Company-Logo-2-1.jpg"
                 alt="Test2Deploy logo"
-                className="h-12 lg:h-14 w-auto object-contain"
-                style={{ maxWidth: "200px" }}
+                className="h-10 lg:h-12 w-auto object-contain rounded"
+                style={{ maxWidth: "160px" }}
               />
             </div>
             <span

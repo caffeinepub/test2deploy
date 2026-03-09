@@ -1,13 +1,19 @@
+import BlogSection from "./components/BlogSection";
+import CaseStudySection from "./components/CaseStudySection";
 import ContactFormSection from "./components/ContactFormSection";
 import CoreServicesSection from "./components/CoreServicesSection";
 import FAQSection from "./components/FAQSection";
 import FinalCTASection from "./components/FinalCTASection";
 import Footer from "./components/Footer";
+import FounderSection from "./components/FounderSection";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import HowItWorksSection from "./components/HowItWorksSection";
 import IdealUseCasesSection from "./components/IdealUseCasesSection";
+import IndustriesSection from "./components/IndustriesSection";
 import RealOutcomesSection from "./components/RealOutcomesSection";
+import TestimonialsSection from "./components/TestimonialsSection";
+import ToolsSection from "./components/ToolsSection";
 import TrustStrip from "./components/TrustStrip";
 import WhoWeHelpSection from "./components/WhoWeHelpSection";
 import WhyDifferentSection from "./components/WhyDifferentSection";
@@ -25,12 +31,18 @@ export default function App() {
       <main id="main-content">
         <HeroSection />
         <TrustStrip />
+        <FounderSection />
         <WhoWeHelpSection />
+        <IndustriesSection />
         <CoreServicesSection />
+        <ToolsSection />
         <WhyDifferentSection />
+        <TestimonialsSection />
+        <CaseStudySection />
         <RealOutcomesSection />
         <HowItWorksSection />
         <IdealUseCasesSection />
+        <BlogSection />
         <ContactFormSection />
         <FAQSection />
         <FinalCTASection />

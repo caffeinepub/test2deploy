@@ -5,7 +5,8 @@ const services = [
     title: "Bug Buster Sprint",
     price: "€349",
     period: "one-time",
-    description: "Rapid bug detection for your existing product or MVP.",
+    description:
+      "Catch critical bugs before your users do. A rapid 3–5 day testing sprint to identify and prioritize issues that could break your product at launch.",
     features: [
       "Up to 20 hours of manual testing",
       "Detailed bug report with severity ratings",
@@ -21,7 +22,8 @@ const services = [
     title: "MVP Quality Sprint",
     price: "€1,500",
     period: "one-time",
-    description: "Full QA coverage for your MVP before launch day.",
+    description:
+      "Launch your MVP with complete confidence. A 2-week deep-dive QA engagement that validates every critical user journey and delivers a clear Go/No-Go release decision.",
     features: [
       "Up to 60 hours of comprehensive testing",
       "Functional, UI/UX & performance testing",
@@ -37,7 +39,8 @@ const services = [
     title: "Ongoing QA Support",
     price: "Custom",
     period: "monthly",
-    description: "Continuous QA partnership for growing products.",
+    description:
+      "Never worry about release quality again. Flexible monthly QA partnership that scales with your team — from sprint support to full regression cycles.",
     features: [
       "Dedicated QA resource (part or full-time)",
       "Sprint-based testing cycles",
@@ -53,7 +56,8 @@ const services = [
     title: "Advanced QA Services",
     price: "Custom",
     period: "project",
-    description: "Specialized testing for complex technical requirements.",
+    description:
+      "Level up your testing maturity. From test automation frameworks to performance testing — specialized QA for products that need to scale reliably.",
     features: [
       "API & integration testing",
       "Performance & load testing",
